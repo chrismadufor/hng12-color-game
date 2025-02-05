@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Guessing Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="gameContainer">
+      <h1>Color Master</h1>
+      <p id="gameInstructions" data-testid="gameInstructions">
+        Guess the correct color! Click the option that matches the displayed
+        color.
+      </p>
+      <div id="gameWrap" class="game-wrap hide">
+        <div class="color-wrap">
+          <div id="colorBox" data-testid="colorBox"></div>
+
+          <div id="options" class="options hide"></div>
+        </div>
+
+        <p id="gameStatus" data-testid="gameStatus"></p>
+        <div id="metaWrap" class="meta-wrap">
+          <p id="score" data-testid="score">Score: 0</p>
+          <p id="timer">Time: 60s</p>
+        </div>
+        <button
+          id="newGameButton"
+          class="gameButton"
+          data-testid="newGameButton"
+        >
+          Reset Game
+        </button>
+      </div>
+      <div id="startWrap" class="start-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1500042600524-37ecb686c775?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fGNvbG9yfGVufDB8fDB8fHww"
+          alt="color-img"
+        />
+        <button id="startGameButton" class="gameButton">Start Game</button>
+      </div>
+      <div id="endWrap" class="end-wrap hide">
+        <img
+          src="https://images.unsplash.com/photo-1500042600524-37ecb686c775?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fGNvbG9yfGVufDB8fDB8fHww"
+          alt="color-img"
+        />
+        <p id="gameStatus" data-testid="gameStatus"></p>
+        <button
+          id="resetGameButton"
+          class="gameButton"
+          data-testid="resetGameButton"
+        >
+          Play Again
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

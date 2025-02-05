@@ -1,0 +1,159 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #000000;
+  margin: 0;
+  padding: 0 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#gameContainer {
+  max-width: 500px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.color-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+}
+
+.hide {
+  display: none;
+}
+
+#colorBox {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  gap: 10px;
+}
+
+.colorOption {
+  width: 60px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.colorOption:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.colorOption.pressed {
+  transform: scale(0.9);
+}
+
+.shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+#options button {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#gameStatus,
+#score,
+#timer {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+#newGameButton {
+  /* display: none; */
+}
+
+.gameButton {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background 0.2s ease-in-out;
+  width: 100%;
+}
+
+.gameButton:hover {
+  background: #0056b3;
+}
+
+.meta-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    border-radius: 8px;
+}
